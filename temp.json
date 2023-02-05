@@ -1,0 +1,78 @@
+{
+  "name": "6529Seizing",
+  "created_by": "6529 Collections",
+  "external_url": "https://6529.io/collections/the-memes/meme1-season1-card1/",
+  "description": "Anon: Hey 6529, what's up?  \n6529: SEIZE THE MEMES OF PRODUCTION!\n\nMeme: 1  \nSeason: 1  \nCard: 1",
+  "attributes": [
+    { "trait_type": "Artist", "value": "6529er" },
+    { "trait_type": "Meme Name", "value": "Seize The Memes of Production" },
+    { "trait_type": "Punk 6529", "value": "Yes" },
+    { "value": "Yes", "trait_type": "Gradient" },
+    { "trait_type": "Palette", "value": "Color" },
+    { "trait_type": "Movement", "value": "No" },
+    { "trait_type": "Dynamic", "value": "No" },
+    { "trait_type": "Interactive", "value": "No" },
+    { "trait_type": "Collab", "value": "No" },
+    { "trait_type": "OM", "value": "No" },
+    { "trait_type": "3D", "value": "No" },
+    { "trait_type": "Type", "value": "Card" },
+    { "trait_type": "Style", "value": "Punk" },
+    { "trait_type": "Jewel", "value": "None" },
+    { "trait_type": "Superpower", "value": "Tweeting" },
+    { "trait_type": "Dharma", "value": "Education" },
+    { "trait_type": "Gear", "value": "Nerd Glasses" },
+    { "trait_type": "Clothing", "value": "Hoodie" },
+    { "trait_type": "Element", "value": "Lightning" },
+    { "trait_type": "Mystery", "value": "None" },
+    { "trait_type": "Secrets", "value": "None" },
+    { "trait_type": "Weapon", "value": "None" },
+    { "trait_type": "Home", "value": "SoHo" },
+    { "trait_type": "Parent", "value": "None" },
+    { "trait_type": "Sibling", "value": "None" },
+    { "trait_type": "Food", "value": "Tonkotsu Ramen" },
+    { "trait_type": "Drink", "value": "Vodka Martini" },
+    { "trait_type": "Issuance Month", "value": "2022/06" },
+    { "trait_type": "Pepe", "value": "No" },
+    { "trait_type": "GM", "value": "No" },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Points - Power",
+      "value": "69",
+      "max_value": "100"
+    },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Points - Wisdom",
+      "value": "100",
+      "max_value": "100"
+    },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Points - Loki",
+      "value": "0",
+      "max_value": "100"
+    },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Points - Speed",
+      "value": "25",
+      "max_value": "100"
+    },
+    { "trait_type": "Bonus", "value": "None" },
+    { "trait_type": "Boost", "value": "None" },
+    { "display_type": "number", "trait_type": "Type - Meme", "value": "1" },
+    { "display_type": "number", "trait_type": "Type - Season", "value": "1" },
+    { "display_type": "number", "trait_type": "Type - Card", "value": "1" },
+    { "trait_type": "Summer", "value": "No" },
+    { "trait_type": "Tulip", "value": "No" }
+  ],
+  "image_details": {
+    "bytes": 480353,
+    "format": "JPEG",
+    "sha256": "fbc359a45841009abdfdfc984db2df75a790f9757010a3809337a700836badae",
+    "width": 3241,
+    "height": 4744
+  },
+  "image": "https://arweave.net/eu-bNSvl6cRsi0DwZud2QRfOmaan-a6kI8OpWBkbyl0",
+  "image_url": "https://arweave.net/eu-bNSvl6cRsi0DwZud2QRfOmaan-a6kI8OpWBkbyl0"
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Frog Breeding</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="example-parent">
+    <h1>Breeding Farm</h1>
+    <div class="example-origin">
+      List Frog
+      <div class="sectionFrogSelection" >
+        Male
+        <div class="ListFrog M" ondragover="onDragOver(event);" ondrop="onDrop(event);" id="ListFrog_M">
+          
+            <div class="card bg-warning" style="width: 18rem;" draggable="true" ondragstart="onDragStart(event);"
+              ondragend="onDragEnd(event);">
+              <!-- put item.userId & item.id below this -->
+              <div class="card-header"></div>
+
+              <div class="card-body">
+                <!-- put item.title below this -->
+                <h5 class="card-title"></h5>
+                <!-- put item.body below this -->
+                <p class="card-text"></p>
+              </div>
+            </div>
+          
+
+        <!--  <div id="draggable-1" class="example-draggable" draggable="true" ondragstart="onDragStart(event);"
+            ondragend="onDragEnd(event);">
+            thing 1
+          </div>
+          <div id="draggable-2" class="example-draggable" draggable="true" ondragstart="onDragStart(event);"
+            ondragend="onDragEnd(event);">
+            thing 2
+          </div>
+        -->
+        </div>
+        Female
+        <div class="ListFrog F" ondragover="onDragOver(event);" ondrop="onDrop(event);" id="ListFrog_F">
+
+          <div id="draggable-5" class="example-draggable" draggable="true" ondragstart="onDragStart(event);"
+            ondragend="onDragEnd(event);" ondrop="onDrop(event);">
+            thing 3
+          </div>
+          <div id="draggable-6" class="example-draggable" draggable="true" ondragstart="onDragStart(event);"
+            ondragend="onDragEnd(event);" ondrop="onDrop(event);">
+            thing 4
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example-origin">
+      <div class="sectionFrogParent">
+        Papa
+        <div class="dropzone M" ondragover="onDragOver(event);" ondrop="onDrop(event);"
+          ondragenter="onDragEnter(event);" id="dropzone_M">
+
+          <div class="PlaceHolder">
+
+          </div>
+
+        </div>
+        Maman
+        <div class="dropzone F" ondragover="onDragOver(event);" ondrop="onDrop(event);" id="dropzone_F">
+
+          <div class="PlaceHolder">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--   <div class="ListFrog">
+    <div class="card bg-warning">
+       put item.userId & item.id below this 
+      <div class="card-header"></div>
+
+      <div class="card-body">
+         put item.title below this 
+        <h5 class="card-title"></h5>
+         put item.body below this 
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div> -->
+  <script>
+    $(function () {
+      //hide first div or remove after append using `$(".card:first").remove()`
+      let tokens = [1, 4, 56,65,77, 1002];
+      let i =0;
+      $(".card:first").hide()
+        tokens.forEach(element => {
+        console.log(element);
+        $.ajax({
+          url: "https://cdn.gradis.art/gradis-json/1",//"https://arweave.net/OYeIdxgQ7LQJqBL_VznWj0trqi9jqKHO3xHZcnt_Wn8",
+          success: function (result) {
+            i=i+1;
+            /*$.each(result, function (index, item) {*/
+            var cards = $(".card:first").clone() //clone first divs
+            var userId = result.name;
+            var typeId = result.external_url;
+            var titleId = result.image;
+            var bodyId = result.description;
+            //
+              $(cards).attr({"id":"draggable-"+i,
+                              "draggable":"true"
+                            });
+              $(cards).addClass("example-draggable");
+             
+            //add values inside divs
+            $(cards).find(".card-header").html("user id: " + userId + " - " + "created by: " + typeId);
+            $(cards).find(".card-title").html(titleId);
+            $(cards).find(".card-text").html(bodyId);
+            $(cards).show() //show cards
+            $(cards).appendTo($(".ListFrog.M"));//append to container
+            /*});*/
+          },
+          error: function (xhr, status, error) { alert(xhr.responseText); }
+        });
+      });
+
+    });
+  </script>
+
+
+</body>
+
+</html>
