@@ -18,7 +18,7 @@
         Male
         <div class="ListFrog M" ondragover="onDragOver(event);" ondrop="onDrop(event);" id="ListFrog_M">
           
-            <div class="card bg-warning" style="width: 18rem;" draggable="true" ondragstart="onDragStart(event);"
+            <div class="card bg-warning card-origin" draggable="true" ondragstart="onDragStart(event);"
               ondragend="onDragEnd(event);">
               <!-- put item.userId & item.id below this -->
               <div class="card-header"></div>
@@ -45,7 +45,7 @@
         Female
         <div class="ListFrog F" ondragover="onDragOver(event);" ondrop="onDrop(event);" id="ListFrog_F">
 
-          <div id="draggable-5" class="example-draggable" draggable="true" ondragstart="onDragStart(event);"
+          <!--<div id="draggable-5" class="example-draggable" draggable="true" ondragstart="onDragStart(event);"
             ondragend="onDragEnd(event);" ondrop="onDrop(event);">
             thing 3
           </div>
@@ -53,6 +53,7 @@
             ondragend="onDragEnd(event);" ondrop="onDrop(event);">
             thing 4
           </div>
+          -->
         </div>
       </div>
     </div>
@@ -62,7 +63,7 @@
         <div class="dropzone M" ondragover="onDragOver(event);" ondrop="onDrop(event);"
           ondragenter="onDragEnter(event);" id="dropzone_M">
 
-          <div class="PlaceHolder">
+          <div class="PlaceHolder M">
 
           </div>
 
@@ -70,11 +71,14 @@
         Maman
         <div class="dropzone F" ondragover="onDragOver(event);" ondrop="onDrop(event);" id="dropzone_F">
 
-          <div class="PlaceHolder">
+          <div class="PlaceHolder F">
 
           </div>
         </div>
       </div>
+    </div>
+    <div class="example-parent">
+      <button class="btnBreed" onclick="btnBreedClick()"> Breed!</button>
     </div>
   </div>
 
@@ -94,7 +98,7 @@
   <script>
     $(function () {
       //hide first div or remove after append using `$(".card:first").remove()`
-      let tokens = [1, 4, 56,65,77, 1002];
+      let tokens = [1, 4,7,12,21, 56,65,77, 1002];
       let i =0;
       $(".card:first").hide()
         tokens.forEach(element => {
@@ -120,7 +124,12 @@
             $(cards).find(".card-title").html(titleId);
             $(cards).find(".card-text").html(bodyId);
             $(cards).show() //show cards
-            $(cards).appendTo($(".ListFrog.M"));//append to container
+            if (element % 2 == 0){
+            $(cards).appendTo($(".ListFrog.F"));//append to container
+            }
+            else{
+              $(cards).appendTo($(".ListFrog.M"));//append to container
+            }
             /*});*/
           },
           error: function (xhr, status, error) { alert(xhr.responseText); }

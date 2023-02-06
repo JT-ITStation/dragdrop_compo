@@ -10,8 +10,6 @@
 
 .sectionFrogSelection {
   border: 5px solid #DFA612;
-  width: auto;
-  
   color: black;
   display: flex;
   flex-direction: row;
@@ -21,9 +19,7 @@
 }
 
 .sectionFrogParent {
-  border: 5px solid #df2a12;
-  width: auto;
-  
+  border: 5px solid #df2a12; 
   color: rgb(0, 0, 0);
   display: flex;
   flex-direction: row;
@@ -36,8 +32,8 @@
   
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  max-width: 50%;
+  width: 45%;
+  margin: 10px 50px;
   font-family: sans-serif;
   font-weight: bold;
   overflow-x: scroll;
@@ -46,36 +42,32 @@
 .ListFrog.M {
   border: 2px solid #128ddf;
   color: rgb(16, 39, 240);
-  width: 50%;
-  margin: 10px 50px;
 }
 
 .ListFrog.F {
   border: 2px solid #df12a2;
   color: rgb(232, 16, 240);
-  width: 50%;
-  margin: 10px 50px;
+  
 }
 
 .example-origin {
   width: 100%;
-  flex-basis: 100%;
-  flex-grow: 1;
   padding: 10px;
 }
 
-.card-origin {
-  flex-basis: 100%;
-  flex-grow: 1;
-  padding: 10px;
+.card.card-origin {
+  flex-basis: 33%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width: 100%;
 }
 
 .example-draggable {
   background-color: #4AAE9B;
   color: white;
   font-weight: normal;
-  margin-bottom: 10px;
-  margin-top: 10px;
   padding: 10px;
   min-width: 300px;
   
@@ -91,9 +83,9 @@
   flex-basis: 100%;
   flex-grow: 1;
   padding: 20px 20px;
-  height: 350px;
   margin: 0px 10px 0px 20px;
   display: flex;
+  min-height: 200px;
   justify-content: center;
 }
 .dropzone.M {
@@ -106,9 +98,18 @@
 .PlaceHolder {
   width: 50%;
   height: 100%;
-  background-color: gray;
+  
   /*display: none;*/
+}
+.PlaceHolder.M{
+  background-color: gray;
+}
+.PlaceHolder.F{
+  background-color: gray;
+}
 
+.btnBreed{
+  align-self: center;
 }
 
 

@@ -4,7 +4,7 @@ function onDragStart(event) {
   let temp = document.getElementById(event.target.id).parentElement;
 
   //en fonction de classe
-  if (temp.className == "ListFrog M") {
+  if (temp.className == "ListFrog M" || temp.className == "PlaceHolder M") {
     let el1 = document.querySelector("#dropzone_M");
     if (!el1.hasAttribute("onDragOver")) {
       el1.setAttribute("onDragOver", "onDragOver(event)");
@@ -18,7 +18,7 @@ function onDragStart(event) {
       el4.setAttribute("onDragOver", "onDragOver(event)");
     }
   }
-  if (temp.className == "ListFrog F") {
+  if (temp.className == "ListFrog F" || temp.className == "PlaceHolder F") {
     let el1 = document.querySelector("#dropzone_F");
     if (!el1.hasAttribute("onDragOver")) {
       el1.setAttribute("onDragOver", "onDragOver(event)");
@@ -53,11 +53,22 @@ function onDrop(event) {
   const draggableElement = document.getElementById(id);
   //récupérer l'enfant si dropzone globale
   const dropzone = event.target;
-  if (dropzone.className == "PlaceHolder" || dropzone.className.includes("ListFrog")) {
+  if (dropzone.className.includes("PlaceHolder")){     // || dropzone.className.includes("ListFrog")) {
+    let temp = draggableElement.className;
+    
+    draggableElement.className = temp.replace('card-origin','');//.replace("card-origin","") ;
+    dropzone.appendChild(draggableElement);
+    event.dataTransfer.clearData();
+  }
+  if (dropzone.className.includes("ListFrog")){     // || dropzone.className.includes("")) {
+    draggableElement.className = draggableElement.className+" card-origin" ;
     dropzone.appendChild(draggableElement);
     event.dataTransfer.clearData();
   }
 }
 
+function btnBreedClick(){
+  alert("ça prend quelques instants de faire des bébés grenouille")
+}
 //function get tokenId list from user wallet
 //get json metadata
