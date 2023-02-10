@@ -57,10 +57,14 @@ function onDrop(event) {
     let temp = draggableElement.className;
     
     draggableElement.className = temp.replace('card-origin','');//.replace("card-origin","") ;
+    draggableElement.className = draggableElement.className+" card-full";
     dropzone.appendChild(draggableElement);
     event.dataTransfer.clearData();
   }
   if (dropzone.className.includes("ListFrog")){     // || dropzone.className.includes("")) {
+    let temp = draggableElement.className;
+    
+    draggableElement.className = temp.replace('card-full','');
     draggableElement.className = draggableElement.className+" card-origin" ;
     dropzone.appendChild(draggableElement);
     event.dataTransfer.clearData();
